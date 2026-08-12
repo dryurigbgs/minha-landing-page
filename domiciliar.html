@@ -105,21 +105,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
     }
 
     .brand {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 4px;
-      text-align: center;
+      gap: 10px;
+      text-align: left;
+      text-decoration: none;
+      flex-shrink: 0;
     }
 
     .brand-avatar-mini {
-      width: 44px;
-      height: 44px;
-      min-width: 44px;
-      min-height: 44px;
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      min-height: 42px;
       flex-shrink: 0;
       aspect-ratio: 1 / 1;
       border-radius: 50%;
@@ -139,19 +141,24 @@
       font-size: 11.5px;
       color: var(--text-muted);
       font-weight: 600;
+      display: block;
     }
 
     .nav-links {
       display: none;
-      gap: 28px;
+      gap: 20px;
       list-style: none;
+      align-items: center;
+      margin: 0;
+      padding: 0;
     }
 
     .nav-links a {
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--text-main);
       transition: color 0.2s;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -159,14 +166,16 @@
     }
 
     .btn-nav {
-      padding: 10px 20px;
-      font-size: 14px;
+      height: 40px;
+      padding: 0 18px;
+      font-size: 13.5px;
     }
 
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      flex-shrink: 0;
     }
 
     .link-online {
@@ -174,10 +183,14 @@
       font-weight: 700;
       color: var(--primary);
       background: var(--primary-light);
-      padding: 8px 14px;
+      height: 40px;
+      padding: 0 16px;
       border-radius: var(--radius-full);
       transition: all 0.2s ease;
       display: none;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
     }
 
     .link-online:hover {
@@ -1140,7 +1153,7 @@
       }
 
       .link-online {
-        display: inline-block;
+        display: inline-flex;
       }
 
       .hero {
