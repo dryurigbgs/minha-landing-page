@@ -165,10 +165,19 @@
       color: var(--primary);
     }
 
+    .btn-wpp-text-mobile {
+      display: none;
+    }
+
+    .btn-wpp-text-desktop {
+      display: inline;
+    }
+
     .btn-nav {
       height: 40px;
       padding: 0 18px;
       font-size: 13.5px;
+      white-space: nowrap;
     }
 
     .nav-actions {
@@ -1129,6 +1138,50 @@
       }
     }
 
+    /* ---------- Responsiveness ---------- */
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 14px;
+      }
+      .btn {
+        padding: 12px 18px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-container {
+        gap: 6px;
+      }
+      .brand {
+        gap: 8px;
+      }
+      .brand-avatar-mini {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+      }
+      .brand-text h1 {
+        font-size: 14px;
+      }
+      .brand-text span {
+        font-size: 10px;
+      }
+      .btn-nav {
+        height: 36px;
+        padding: 0 10px;
+        font-size: 12px;
+        gap: 5px;
+      }
+      .btn-wpp-text-desktop {
+        display: none;
+      }
+      .btn-wpp-text-mobile {
+        display: inline;
+      }
+    }
+
     @media (min-width: 960px) {
       .brand {
         flex-direction: row;
@@ -1226,7 +1279,8 @@
         </a>
         <a href="https://wa.me/5531975374301?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20m%C3%A9dica%20domiciliar%20em%20BH."
           target="_blank" rel="noopener" class="btn btn-primary btn-nav">
-          Falar no WhatsApp
+          <span class="btn-wpp-text-desktop">Falar no WhatsApp</span>
+          <span class="btn-wpp-text-mobile">WhatsApp</span>
         </a>
       </div>
     </div>
