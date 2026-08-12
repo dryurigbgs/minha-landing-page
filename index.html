@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Dr. Yuri Gabriel - CRM-MG 117.926. Atendimento Médico Humanizado: Consulta Médica Domiciliar em Belo Horizonte e Telemedicina para todo o Brasil. Escolha sua modalidade e agende pelo WhatsApp.">
+  <title>Dr. Yuri Gabriel | Atendimento Médico Domiciliar em BH e Telemedicina (CRM-MG 117.926)</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="preload" as="image" href="images/dr-yuri-1.jpg" fetchpriority="high">
+
+  <style>
+    :root {
+      --primary: #0F4C81;
+      --primary-dark: #09355c;
+      --primary-light: #eef5fc;
+      --accent: #25D366;
+      --accent-dark: #1da851;
+      --accent-glow: rgba(37, 211, 102, 0.3);
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 2px 8px rgba(15, 76, 129, 0.06);
+      --shadow-md: 0 8px 24px rgba(15, 76, 129, 0.08);
+      --shadow-lg: 0 20px 40px rgba(15, 76, 129, 0.12);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+      background-color: var(--bg-white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------- Top Bar & Header Navbar ---------- */
+    .topbar {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.95);
+      padding: 9px 0;
+      font-size: 13.5px;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .topbar strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .header-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+      padding: 14px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-avatar-mini {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      flex-shrink: 0;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 35%;
+      border: 2px solid var(--primary);
+    }
+
+    .brand-text h1 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: none;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-main);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: var(--radius-full);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-secondary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(15, 76, 129, 0.2);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(6px);
+    }
+
+    .btn-outline-white:hover {
+      background: #ffffff;
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .btn-nav {
+      padding: 10px 18px;
+      font-size: 13.5px;
+    }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      background: linear-gradient(135deg, #0F4C81 0%, #072540 100%);
+      color: #ffffff;
+      padding: 55px 0 75px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -15%;
+      right: -8%;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(37, 211, 102, 0.12) 0%, rgba(15, 76, 129, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.3);
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      line-height: 1.25;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-sub {
+      font-size: 16.5px;
+      line-height: 1.6;
+      opacity: 0.92;
+      margin: 0 auto 36px;
+      max-width: 760px;
+      font-weight: 400;
+    }
+
+    /* ---------- Hub Cards (The Two Modalities) ---------- */
+    .modalities-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .modality-card {
+      background: rgba(255, 255, 255, 0.98);
+      color: var(--text-main);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .modality-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
+      border-color: rgba(15, 76, 129, 0.35);
+    }
+
+    .modality-card.card-domiciliar {
+      border-top: 5px solid #0F4C81;
+    }
+
+    .modality-card.card-telemedicina {
+      border-top: 5px solid #25D366;
+    }
+
+    .modality-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .modality-icon-wrapper {
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-domiciliar .modality-icon-wrapper {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .card-telemedicina .modality-icon-wrapper {
+      background: #e8f9ee;
+      color: var(--accent-dark);
+    }
+
+    .modality-tag {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .card-domiciliar .modality-tag {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .card-telemedicina .modality-tag {
+      background: #e8f9ee;
+      color: var(--accent-dark);
+    }
+
+    .modality-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .modality-desc {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .modality-perks {
+      list-style: none;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .modality-perks li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .modality-perks li svg {
+      flex-shrink: 0;
+    }
+
+    .card-domiciliar .modality-perks li svg {
+      color: var(--primary);
+    }
+
+    .card-telemedicina .modality-perks li svg {
+      color: var(--accent-dark);
+    }
+
+    .modality-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .btn-modality-main {
+      width: 100%;
+      font-size: 15px;
+      padding: 14px 20px;
+    }
+
+    .btn-modality-wpp {
+      width: 100%;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 13.5px;
+      padding: 11px 18px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-modality-wpp:hover {
+      background: #e2e8f0;
+      color: var(--primary-dark);
+    }
+
+    .btn-modality-wpp svg {
+      color: var(--accent-dark);
+    }
+
+    /* ---------- Doctor Hero Bar ---------- */
+    .doctor-hero-bar {
+      margin-top: 36px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .doctor-hero-profile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+    }
+
+    .doctor-hero-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 30%;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .doctor-hero-meta h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .doctor-hero-meta p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .doctor-hero-badges {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .doctor-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.14);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      color: #ffffff;
+    }
+
+    /* ---------- Section Headers ---------- */
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 45px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.25;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    .section-title span {
+      color: var(--primary);
+    }
+
+    .section-sub {
+      font-size: 15.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ---------- Comparison Guide Section ---------- */
+    .guide-section {
+      padding: 70px 0;
+      background: var(--bg-light);
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .guide-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .guide-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .guide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    .guide-card.domiciliar .guide-badge {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .guide-card.telemedicina .guide-badge {
+      background: #e8f9ee;
+      color: var(--accent-dark);
+    }
+
+    .guide-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .guide-card p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+
+    .guide-situations {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .guide-situations li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #334155;
+    }
+
+    .guide-situations li svg {
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .guide-card.domiciliar .guide-situations li svg {
+      color: var(--primary);
+    }
+
+    .guide-card.telemedicina .guide-situations li svg {
+      color: var(--accent-dark);
+    }
+
+    .guide-card .btn {
+      margin-top: auto;
+    }
+
+    /* ---------- Doctor About Section ---------- */
+    .about-section {
+      padding: 80px 0;
+      background: var(--bg-white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-photo-wrapper {
+      position: relative;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .about-photo-frame {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid #ffffff;
+      background: var(--primary-light);
+    }
+
+    .about-photo-frame img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .about-badge-crm {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-dark);
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      font-size: 13.5px;
+      font-weight: 700;
+      box-shadow: var(--shadow-md);
+      white-space: nowrap;
+      border: 2px solid #ffffff;
+    }
+
+    .about-content h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 18px;
+      line-height: 1.25;
+    }
+
+    .about-content h2 span {
+      color: var(--primary);
+    }
+
+    .about-lead {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .pillar-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pillar-info h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 3px;
+    }
+
+    .pillar-info p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* ---------- Differentials / Why Choose Us ---------- */
+    .diff-section {
+      padding: 75px 0;
+      background: var(--bg-light);
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .diff-card {
+      background: var(--bg-white);
+      padding: 28px 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .diff-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+      border-color: rgba(15, 76, 129, 0.3);
+    }
+
+    .diff-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .diff-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .diff-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ---------- Testimonials ---------- */
+    .reviews-section {
+      padding: 75px 0;
+      background: var(--bg-white);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--bg-light);
+      padding: 28px 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-stars {
+      color: #f59e0b;
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .review-text {
+      font-size: 14.5px;
+      color: #334155;
+      font-style: italic;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13.5px;
+    }
+
+    .review-name {
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .review-badge-type {
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    /* ---------- FAQ Section ---------- */
+    .faq-section {
+      padding: 75px 0;
+      background: var(--bg-light);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    details[open] {
+      box-shadow: var(--shadow-sm);
+      border-color: var(--primary);
+    }
+
+    summary {
+      padding: 18px 22px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--primary);
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 22px 20px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ---------- CTA Final Hub ---------- */
+    .cta-hub {
+      padding: 75px 0;
+      background: linear-gradient(135deg, #0F4C81 0%, #082947 100%);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .cta-hub-box {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .cta-hub h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .cta-hub p {
+      font-size: 16.5px;
+      opacity: 0.92;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .cta-hub-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: #061c30;
+      color: #94a3b8;
+      padding: 45px 0 30px;
+      font-size: 13.5px;
+    }
+
+    .aviso-emergencia {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-bottom: 35px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      color: #fca5a5;
+    }
+
+    .icon-alert {
+      background: #ef4444;
+      color: #ffffff;
+      font-weight: 800;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .aviso-emergencia h4 {
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .aviso-emergencia p {
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    .aviso-emergencia a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    .footer-info {
+      text-align: center;
+      padding-bottom: 25px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-info h3 {
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .footer-info p {
+      margin-bottom: 4px;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 12.5px;
+    }
+
+    /* ---------- Floating WhatsApp Button ---------- */
+    .wpp-float-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .wpp-tooltip {
+      background: #ffffff;
+      color: #1e293b;
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      white-space: nowrap;
+      display: none;
+      animation: pulseTooltip 2.5s infinite;
+      border: 1px solid var(--border-color);
+    }
+
+    .wpp-float {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px var(--accent-glow);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+    }
+
+    .wpp-float:hover {
+      background: var(--accent-dark);
+      transform: scale(1.08) translateY(-2px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+    }
+
+    @keyframes pulseTooltip {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    /* ---------- Responsiveness ---------- */
+    @media (min-width: 768px) {
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .hero-sub {
+        font-size: 18px;
+      }
+
+      .modalities-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .guide-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 400px 1fr;
+        gap: 50px;
+      }
+
+      .about-pillars {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .diff-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-hub-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: flex;
+      }
+
+      .wpp-tooltip {
+        display: block;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .diff-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    Dr. Yuri Gabriel | CRM-MG 117.926 | Atendimento Médico Domiciliar em <strong>Belo Horizonte</strong> e Telemedicina para <strong>Todo o Brasil</strong>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/dr-yuri-1.jpg" alt="Dr. Yuri Gabriel Miniatura"
+          class="brand-avatar-mini" width="44" height="44" decoding="async">
+        <div class="brand-text">
+          <h1>Dr. Yuri Gabriel</h1>
+          <span>CRM-MG 117.926 | Médico</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#modalidades">Atendimentos</a></li>
+        <li><a href="#comparativo">Como Escolher</a></li>
+        <li><a href="#sobre">Sobre o Médico</a></li>
+        <li><a href="#diferenciais">Vantagens</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/5531975374301?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas%20com%20o%20Dr.%20Yuri."
+          target="_blank" rel="noopener" class="btn btn-primary btn-nav">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Dual Modality Hub -->
+  <section class="hero" id="modalidades">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Atendimento Humanizado Particular</div>
+        <h2>Medicina com o cuidado, a atenção e o tempo que você merece.</h2>
+        <p class="hero-sub">
+          Consultas médicas individuais com o <strong>Dr. Yuri Gabriel</strong> (CRM-MG 117.926). Escolha como prefere ser atendido: <strong>presencialmente no aconchego do seu lar em Belo Horizonte</strong> ou <strong>online por telemedicina para todo o Brasil</strong>.
+        </p>
+
+        <!-- Modalities Cards Grid -->
+        <div class="modalities-grid">
+          
+          <!-- Card 1: Atendimento Domiciliar -->
+          <div class="modality-card card-domiciliar">
+            <div>
+              <div class="modality-header">
+                <div class="modality-icon-wrapper">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                </div>
+                <span class="modality-tag">Presencial em BH</span>
+              </div>
+              <h3 class="modality-title">Consulta Domiciliar em BH</h3>
+              <p class="modality-desc">
+                O médico vai até você. Exame físico minucioso, conforto absoluto sem trânsito e sem salas de espera em todas as 9 regionais de Belo Horizonte.
+              </p>
+              <ul class="modality-perks">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Exame físico completo na sua residência
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Prescrições físicas, receitas e atestados
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Cobertura em 100% dos bairros de BH
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Ideal para idosos e mobilidade reduzida
+                </li>
+              </ul>
+            </div>
+
+            <div class="modality-actions">
+              <a href="domiciliar.html" class="btn btn-secondary btn-modality-main">
+                Ver Consulta Domiciliar 🏠
+              </a>
+              <a href="https://wa.me/5531975374301?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20m%C3%A9dica%20domiciliar%20em%20BH."
+                target="_blank" rel="noopener" class="btn-modality-wpp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Agendar Domiciliar no WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Telemedicina -->
+          <div class="modality-card card-telemedicina">
+            <div>
+              <div class="modality-header">
+                <div class="modality-icon-wrapper">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <span class="modality-tag">R$ 120 • Online - Todo o Brasil</span>
+              </div>
+              <h3 class="modality-title">Telemedicina (Online)</h3>
+              <p class="modality-desc">
+                Consulta médica rápida por chamada de vídeo para qualquer lugar do Brasil. Receba receitas digitais com QR Code e atestados no WhatsApp em minutos.
+              </p>
+              <ul class="modality-perks">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Receita médica digital (Validade Nacional)
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Sem instalar nenhum aplicativo
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Atendimento ágil para renovação e sintomas
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Atestados e pedidos de exames no e-mail/WhatsApp
+                </li>
+              </ul>
+            </div>
+
+            <div class="modality-actions">
+              <a href="telemedicina.html" class="btn btn-primary btn-modality-main">
+                Ver Telemedicina Online 💻
+              </a>
+              <a href="https://wa.me/5531975374301?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20m%C3%A9dica%20online."
+                target="_blank" rel="noopener" class="btn-modality-wpp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Agendar Online no WhatsApp
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Doctor Hero Mini-Bar -->
+        <div class="doctor-hero-bar">
+          <div class="doctor-hero-profile">
+            <img src="images/dr-yuri-1.jpg" alt="Dr. Yuri Gabriel" class="doctor-hero-avatar">
+            <div class="doctor-hero-meta">
+              <h3>Dr. Yuri Gabriel</h3>
+              <p>Médico Generalista • CRM-MG 117.926</p>
+            </div>
+          </div>
+          <div class="doctor-hero-badges">
+            <div class="doctor-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              Atendimento Humanizado
+            </div>
+            <div class="doctor-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Recibo p/ Reembolso
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Guide Section -->
+  <section class="guide-section" id="comparativo">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Guia Rápido</span>
+        <h2 class="section-title">Qual modalidade é a ideal para <span>o seu momento</span>?</h2>
+        <p class="section-sub">Entenda as características de cada atendimento e escolha a opção mais prática e confortável para a sua necessidade.</p>
+      </div>
+
+      <div class="guide-grid">
+        <!-- Domiciliar Guide -->
+        <div class="guide-card domiciliar">
+          <div class="guide-badge">
+            🏠 Escolha o Atendimento Domiciliar se:
+          </div>
+          <h3>Consulta Presencial em Casa (BH)</h3>
+          <p>Perfeito para quem necessita de exame físico completo, prefere a avaliação presencial ou tem limitações para se locomover.</p>
+          <ul class="guide-situations">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Idosos ou acamados</strong> com dificuldade de ir a consultórios</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Exame físico obrigatório:</strong> ausculta pulmonar, cardíaca, palpação abdominal</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Conforto total:</strong> sem trânsito, sem estacionamento e sem sala de espera</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Presença em BH:</strong> atendimento em qualquer uma das 9 regionais da capital</span>
+            </li>
+          </ul>
+          <a href="domiciliar.html" class="btn btn-secondary">
+            Conhecer Consulta Domiciliar 🏠
+          </a>
+        </div>
+
+        <!-- Telemedicina Guide -->
+        <div class="guide-card telemedicina">
+          <div class="guide-badge">
+            💻 Escolha a Telemedicina se:
+          </div>
+          <h3>Consulta Online (Todo o Brasil)</h3>
+          <p>Ideal para quem busca agilidade imediata, mora fora de BH ou precisa de suporte médico sem sair de casa ou do trabalho.</p>
+          <ul class="guide-situations">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Renovação de receitas</strong> contínuas e controladas com QR Code digital</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Sintomas leves:</strong> gripes, resfriados, alergias, rinite, dor de garganta</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Avaliação de exames:</strong> laudos de sangue, imagem e check-ups preventivos</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span><strong>Qualquer localidade:</strong> pacientes de qualquer estado ou cidade do país</span>
+            </li>
+          </ul>
+          <a href="telemedicina.html" class="btn btn-primary">
+            Conhecer Telemedicina Online 💻
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Doctor Section -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-wrapper">
+          <div class="about-photo-frame">
+            <img src="images/dr-yuri-2.jpg" alt="Dr. Yuri Gabriel Médico" loading="lazy" decoding="async">
+          </div>
+          <div class="about-badge-crm">
+            Dr. Yuri Gabriel • CRM-MG 117.926
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">Conheça o Médico</span>
+          <h2>Cuidado individualizado, <span>escuta atenta</span> e respeito ao paciente</h2>
+          <p class="about-lead">
+            Medicina com foco no ser humano, valorizando o diálogo e a relação de confiança.
+          </p>
+          <p class="about-text">
+            O <strong>Dr. Yuri Gabriel</strong> (CRM-MG 117.926) atua com o compromisso de resgatar o atendimento médico próximo, detalhado e sem pressa. Seja na comodidade da sua residência em Belo Horizonte ou através de telemedicina por vídeo para todo o Brasil, você recebe uma atenção clínica completa e resolutiva.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <div class="pillar-info">
+                <h4>Escuta Ativa</h4>
+                <p>Tempo dedicado para ouvir seu histórico com calma e sem julgamentos.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div class="pillar-info">
+                <h4>Documentos Válidos</h4>
+                <p>Receitas, atestados e pedidos com validade em farmácias e laboratórios.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="pillar-info">
+                <h4>Sem Pressa</h4>
+                <p>Consultas com tempo suficiente para esclarecer todas as suas dúvidas.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="pillar-info">
+                <h4>Ética e Segurança</h4>
+                <p>Total sigilo médico e condutas fundamentadas nas diretrizes clínicas.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5531975374301?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20as%20consultas%20com%20o%20Dr.%20Yuri."
+            target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Falar Diretamente com o Médico
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentials Section -->
+  <section class="diff-section" id="diferenciais">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Por Que Escolher</span>
+        <h2 class="section-title">Praticidade e excelência em <span>cada atendimento</span></h2>
+        <p class="section-sub">Veja os benefícios de contar com uma assistência médica focada em você.</p>
+      </div>
+
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Reembolso de Convênio</h3>
+          <p>Fornecemos recibo médico completo com CRM para você solicitar o reembolso junto ao seu plano de saúde.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3>Agendamento Fácil</h3>
+          <p>Sem burocracias: você agenda diretamente pelo WhatsApp de forma rápida e escolhe o melhor horário.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Receitas e Atestados</h3>
+          <p>Documentos médicos oficiais com validade jurídica nacional entregues no domicílio ou digitalmente.</p>
+        </div>
+
+        <div class="diff-card">
+          <div class="diff-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Zero Fila e Espera</h3>
+          <p>Economize horas do seu dia sendo atendido na sua casa ou no celular sem o risco de contágio em hospitais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Depoimentos</span>
+        <h2 class="section-title">O que dizem os <span>nossos pacientes</span></h2>
+        <p class="section-sub">Experiências reais de quem já cuidou da saúde com o Dr. Yuri Gabriel.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Minha mãe tem 82 anos e dificuldade para sair de casa. O Dr. Yuri veio até nossa residência no Buritis, fez um exame minucioso e foi de uma paciência ímpar. Recomendo de olhos fechados!"
+            </p>
+          </div>
+          <div class="review-author">
+            <span class="review-name">Cláudia M. (Belo Horizonte)</span>
+            <span class="review-badge-type">🏠 Domiciliar</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Precisei renovar receitas e passar por uma consulta de rotina. A telemedicina foi super prática, sem precisar baixar app nenhum, e a receita digital com QR Code chegou no WhatsApp na hora."
+            </p>
+          </div>
+          <div class="review-author">
+            <span class="review-name">Lucas F. (São Paulo)</span>
+            <span class="review-badge-type">💻 Telemedicina</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Perguntas Frequentes</span>
+        <h2 class="section-title">Dúvidas <span>Frequentes</span></h2>
+        <p class="section-sub">Respostas claras sobre as duas modalidades de atendimento.</p>
+      </div>
+
+      <div class="faq-list">
+        <details open>
+          <summary>Qual a diferença entre a consulta domiciliar e a telemedicina?</summary>
+          <div class="faq-answer">
+            Na <strong>Consulta Domiciliar</strong>, o Dr. Yuri vai presencialmente até o seu endereço em Belo Horizonte e realiza exame físico completo. Na <strong>Telemedicina</strong>, a consulta ocorre por chamada de vídeo em seu celular ou computador para pacientes de todo o Brasil, com emissão de receitas digitais instantâneas.
+          </div>
+        </details>
+
+        <details>
+          <summary>Qual o valor das consultas médica online e domiciliar?</summary>
+          <div class="faq-answer">
+            A consulta médica online por <strong>Telemedicina é R$ 120,00</strong>. O atendimento presencial <strong>Domiciliar em BH é R$ 300,00</strong>. Ambos os atendimentos aceitam Pix ou cartão e oferecem recibo médico para reembolso no plano de saúde.
+          </div>
+        </details>
+
+        <details>
+          <summary>Como solicito o reembolso no meu plano de saúde?</summary>
+          <div class="faq-answer">
+            Todas as consultas são particulares. Após o atendimento, emitimos um recibo/nota médica detalhado com nome, CRM e CPF/CNPJ, permitindo que você solicite o reembolso diretamente no aplicativo do seu convênio.
+          </div>
+        </details>
+
+        <details>
+          <summary>As receitas digitais emitidas na telemedicina são válidas em qualquer farmácia?</summary>
+          <div class="faq-answer">
+            Sim! As receitas digitais possuem assinatura eletrônica ICP-Brasil com QR Code oficial e têm validade jurídica em todo o território nacional, tanto em farmácias físicas quanto online.
+          </div>
+        </details>
+
+        <details>
+          <summary>Como faço para agendar meu atendimento?</summary>
+          <div class="faq-answer">
+            Basta clicar em qualquer botão do WhatsApp neste site. Você conversará diretamente conosco para tirar dúvidas, informar seus sintomas ou bairro (para domiciliar) e escolher o melhor dia e horário.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Hub Section -->
+  <section class="cta-hub">
+    <div class="container">
+      <div class="cta-hub-box">
+        <h2>Pronto para cuidar da sua saúde com tranquilidade?</h2>
+        <p>Escolha a modalidade que melhor atende você e agende agora mesmo pelo WhatsApp.</p>
+        
+        <div class="cta-hub-buttons">
+          <a href="domiciliar.html" class="btn btn-secondary">
+            Ver Atendimento Domiciliar (BH) 🏠
+          </a>
+          <a href="telemedicina.html" class="btn btn-primary">
+            Ver Telemedicina Online (Brasil) 💻
+          </a>
+          <a href="https://wa.me/5531975374301?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Yuri."
+            target="_blank" rel="noopener" class="btn btn-outline-white">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Falar no WhatsApp (+55 31 97537-4301)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="aviso-emergencia">
+        <div class="icon-alert">!</div>
+        <div>
+          <h4>AVISO IMPORTANTE DE EMERGÊNCIA</h4>
+          <p>
+            Este serviço é destinado a atendimentos eletivos e queixas de urgência leve. Em casos de emergências graves (como dor intensa no peito, falta de ar severa, convulsões ou acidentes graves), ligue imediatamente para o <a href="tel:192">SAMU (192)</a> ou dirija-se ao pronto-socorro mais próximo.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-info">
+        <h3>Dr. Yuri Gabriel</h3>
+        <p>CRM-MG 117.926 — Médico</p>
+        <p>Atendimento Domiciliar em Belo Horizonte / MG & Telemedicina para Todo o Brasil</p>
+      </div>
+
+      <div class="copyright">
+        © 2026 Dr. Yuri Gabriel. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="wpp-float-container">
+    <div class="wpp-tooltip">Dúvidas? Fale no WhatsApp</div>
+    <a href="https://wa.me/5531975374301?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas%20com%20o%20Dr.%20Yuri."
+      target="_blank" rel="noopener" class="wpp-float" aria-label="Falar no WhatsApp">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </a>
+  </div>
+
+</body>
+
+</html>
