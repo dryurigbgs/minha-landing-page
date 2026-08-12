@@ -8,6 +8,44 @@
     content="Dr. Yuri Gabriel - Atendimento Médico Domiciliar em todas as regionais de Belo Horizonte. Consulta médica humanizada, atenciosa e sem pressa no conforto da sua casa. CRM-MG 117.926">
   <title>Dr. Yuri Gabriel | Médico Domiciliar em Belo Horizonte (CRM-MG 117.926)</title>
 
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Dr. Yuri Gabriel">
+  <meta name="keywords" content="médico domiciliar BH, consulta médica em casa Belo Horizonte, médico em casa BH, consulta domiciliar particular, Dr. Yuri Gabriel, CRM 117.926, atestado domiciliar, receita em casa">
+  <link rel="canonical" href="domiciliar.html">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Yuri Gabriel | Médico Domiciliar em Belo Horizonte">
+  <meta property="og:description" content="Consulta médica presencial humanizada no conforto do seu lar em todas as regionais de BH. Exame físico completo e atencioso. CRM-MG 117.926.">
+  <meta property="og:image" content="images/dr-yuri-1.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dr. Yuri Gabriel - Médico Domiciliar">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Yuri Gabriel | Médico Domiciliar em Belo Horizonte">
+  <meta name="twitter:description" content="Consulta médica presencial humanizada no conforto do seu lar em todas as regionais de BH. CRM-MG 117.926.">
+  <meta name="twitter:image" content="images/dr-yuri-1.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data (Physician + FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Yuri Gabriel - Atendimento Médico Domiciliar",
+    "description": "Consulta médica presencial domiciliar em todas as 9 regionais de Belo Horizonte.",
+    "medicalSpecialty": "GeneralPractice",
+    "identifier": "CRM-MG 117.926",
+    "telephone": "+5531975374301",
+    "priceRange": "$$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Belo Horizonte"
+    },
+    "image": "images/dr-yuri-1.jpg"
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,11 +168,12 @@
       border: 2px solid var(--primary);
     }
 
-    .brand-text h1 {
+    .brand-text .brand-title {
       font-size: 16px;
       font-weight: 800;
       color: var(--primary);
       line-height: 1.2;
+      display: block;
     }
 
     .brand-text span {
@@ -299,6 +338,7 @@
       box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.3);
     }
 
+    .hero h1,
     .hero h2 {
       font-size: 32px;
       line-height: 1.25;
@@ -1262,7 +1302,7 @@
         <img src="images/dr-yuri-1.jpg" alt="Dr. Yuri Gabriel Miniatura"
           class="brand-avatar-mini" width="44" height="44" decoding="async">
         <div class="brand-text">
-          <h1>Dr. Yuri Gabriel</h1>
+          <span class="brand-title">Dr. Yuri Gabriel</span>
           <span>CRM-MG 117.926 | Médico</span>
         </div>
       </a>
@@ -1293,7 +1333,7 @@
         <!-- Coluna Esquerda: Textos persuasivos -->
         <div class="hero-content">
           <div class="hero-badge">Atendimento em Todas as Regionais de BH</div>
-          <h2>Sua saúde tratada com a atenção, o respeito e o conforto que você merece.</h2>
+          <h1>Sua saúde tratada com a atenção, o respeito e o conforto que você merece.</h1>
           <p class="hero-sub">
             Consulta médica humanizada no aconchego da sua casa em qualquer região de Belo Horizonte. Sem filas de
             hospital, sem estresse no trânsito e com tempo dedicado exclusivamente para cuidar de você ou de quem você
@@ -1761,6 +1801,8 @@
     </a>
   </div>
 
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>

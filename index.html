@@ -8,6 +8,82 @@
     content="Dr. Yuri Gabriel - CRM-MG 117.926. Atendimento Médico Humanizado: Consulta Médica Domiciliar em Belo Horizonte e Telemedicina para todo o Brasil. Escolha sua modalidade e agende pelo WhatsApp.">
   <title>Dr. Yuri Gabriel | Atendimento Médico Domiciliar em BH e Telemedicina (CRM-MG 117.926)</title>
 
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Dr. Yuri Gabriel">
+  <meta name="keywords" content="médico domiciliar BH, consulta médica em casa Belo Horizonte, telemedicina, consulta online, Dr. Yuri Gabriel, CRM 117.926, médico particular BH, atestado médico, receita digital">
+  <link rel="canonical" href="index.html">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Yuri Gabriel | Consulta Médica Domiciliar em BH e Telemedicina">
+  <meta property="og:description" content="Atendimento médico humanizado presencial em Belo Horizonte e online por telemedicina para todo o Brasil. CRM-MG 117.926.">
+  <meta property="og:image" content="images/dr-yuri-1.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dr. Yuri Gabriel - Médico">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Yuri Gabriel | Consulta Médica Domiciliar em BH e Telemedicina">
+  <meta name="twitter:description" content="Atendimento médico humanizado presencial em Belo Horizonte e telemedicina online para todo o Brasil. CRM-MG 117.926.">
+  <meta name="twitter:image" content="images/dr-yuri-1.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data (Physician + FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Yuri Gabriel",
+    "description": "Atendimento Médico Domiciliar em Belo Horizonte e Consulta Médica Online por Telemedicina para todo o Brasil.",
+    "medicalSpecialty": "GeneralPractice",
+    "identifier": "CRM-MG 117.926",
+    "telephone": "+5531975374301",
+    "priceRange": "$$",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Belo Horizonte"
+      },
+      {
+        "@type": "Country",
+        "name": "Brasil"
+      }
+    ],
+    "image": "images/dr-yuri-1.jpg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre a consulta domiciliar e a telemedicina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Na Consulta Domiciliar, o Dr. Yuri vai presencialmente até o seu endereço em Belo Horizonte e realiza exame físico completo. Na Telemedicina, a consulta ocorre por chamada de vídeo em seu celular ou computador para pacientes de todo o Brasil, com emissão de receitas digitais instantâneas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual o valor das consultas médica online e domiciliar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A consulta médica online por Telemedicina é R$ 120,00. O atendimento presencial Domiciliar em BH é R$ 300,00. Ambos os atendimentos aceitam Pix ou cartão e oferecem recibo médico para reembolso no plano de saúde."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como solicito o reembolso no meu plano de saúde?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Todas as consultas são particulares. Após o atendimento, emitimos um recibo/nota médica detalhado com nome, CRM e CPF/CNPJ, permitindo que você solicite o reembolso diretamente no aplicativo do seu convênio."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,11 +205,12 @@
       border: 2px solid var(--primary);
     }
 
-    .brand-text h1 {
+    .brand-text .brand-title {
       font-size: 16px;
       font-weight: 800;
       color: var(--primary);
       line-height: 1.2;
+      display: block;
     }
 
     .brand-text span {
@@ -312,6 +389,7 @@
       box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.3);
     }
 
+    .hero h1,
     .hero h2 {
       font-size: 32px;
       line-height: 1.25;
@@ -1264,7 +1342,7 @@
         <img src="images/dr-yuri-1.jpg" alt="Dr. Yuri Gabriel Miniatura" class="brand-avatar-mini" width="44"
           height="44" decoding="async">
         <div class="brand-text">
-          <h1>Dr. Yuri Gabriel</h1>
+          <span class="brand-title">Dr. Yuri Gabriel</span>
           <span>CRM-MG 117.926 | Médico</span>
         </div>
       </a>
@@ -1294,7 +1372,7 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">Atendimento Humanizado Particular</div>
-        <h2>Medicina com o cuidado, a atenção e o tempo que você merece.</h2>
+        <h1>Medicina com o cuidado, a atenção e o tempo que você merece.</h1>
         <p class="hero-sub">
           Consultas médicas individuais com o <strong>Dr. Yuri Gabriel</strong> (CRM-MG 117.926). Escolha como prefere
           ser atendido: <strong>presencialmente no aconchego do seu lar em Belo Horizonte</strong> ou <strong>online por
@@ -1892,6 +1970,8 @@
     </a>
   </div>
 
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>

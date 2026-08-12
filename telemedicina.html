@@ -8,6 +8,44 @@
     content="Dr. Yuri Gabriel - Consulta Médica Online por Telemedicina para todo o Brasil. Receita digital, atestados e exames com assinatura digital válida em todo o país. CRM-MG 117.926">
   <title>Dr. Yuri Gabriel | Telemedicina & Consulta Médica Online (Todo o Brasil)</title>
 
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Dr. Yuri Gabriel">
+  <meta name="keywords" content="telemedicina, consulta médica online, receita digital QR Code, atestado médico online, Dr. Yuri Gabriel, CRM 117.926, renovação de receita online">
+  <link rel="canonical" href="telemedicina.html">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Yuri Gabriel | Telemedicina & Consulta Médica Online">
+  <meta property="og:description" content="Consulta médica online por chamada de vídeo para todo o Brasil. Receba receitas digitais com QR Code e atestados no WhatsApp em minutos. CRM-MG 117.926.">
+  <meta property="og:image" content="images/dr-yuri-1.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dr. Yuri Gabriel - Telemedicina">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Yuri Gabriel | Telemedicina & Consulta Médica Online">
+  <meta name="twitter:description" content="Consulta médica online por chamada de vídeo para todo o Brasil. Receba receitas digitais e atestados no WhatsApp. CRM-MG 117.926.">
+  <meta name="twitter:image" content="images/dr-yuri-1.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data (Physician) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Yuri Gabriel - Telemedicina e Consulta Online",
+    "description": "Consulta médica online por chamada de vídeo para todo o Brasil com emissão de receitas digitais e atestados.",
+    "medicalSpecialty": "GeneralPractice",
+    "identifier": "CRM-MG 117.926",
+    "telephone": "+5531975374301",
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Brasil"
+    },
+    "image": "images/dr-yuri-1.jpg"
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,11 +168,12 @@
       border: 2px solid var(--primary);
     }
 
-    .brand-text h1 {
+    .brand-text .brand-title {
       font-size: 16px;
       font-weight: 800;
       color: var(--primary);
       line-height: 1.2;
+      display: block;
     }
 
     .brand-text span {
@@ -299,6 +338,7 @@
       box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.3);
     }
 
+    .hero h1,
     .hero h2 {
       font-size: 32px;
       line-height: 1.25;
@@ -1208,7 +1248,7 @@
         <img src="images/dr-yuri-1.jpg" alt="Dr. Yuri Gabriel Miniatura"
           class="brand-avatar-mini" width="44" height="44" decoding="async">
         <div class="brand-text">
-          <h1>Dr. Yuri Gabriel</h1>
+          <span class="brand-title">Dr. Yuri Gabriel</span>
           <span>CRM-MG 117.926 | Consulta Online</span>
         </div>
       </a>
@@ -1239,7 +1279,7 @@
         <!-- Coluna Esquerda: Textos persuasivos -->
         <div class="hero-content">
           <div class="hero-badge">Telemedicina para Todo o Brasil</div>
-          <h2>Consulta médica online sem filas, no conforto de onde você estiver.</h2>
+          <h1>Consulta médica online sem filas, no conforto de onde você estiver.</h1>
           <p class="hero-sub">
             Atendimento médico humanizado por chamada de vídeo para todo o Brasil. Receba suas receitas digitais, atestados e pedidos de exame diretamente no seu WhatsApp ou e-mail em minutos.
           </p>
@@ -1684,6 +1724,8 @@
     </a>
   </div>
 
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>
